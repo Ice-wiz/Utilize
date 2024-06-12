@@ -1,16 +1,14 @@
-// src/IconPicker.jsx
-
 import React, { useState } from 'react';
-import * as FiIcons from 'react-icons/fi'; // Importing all Feather icons
-import { IconContext } from 'react-icons'; // Context to provide custom icon size
-import './IconPicker.css'; // Import custom styles if any
+import * as FiIcons from 'react-icons/fi'; 
+import { IconContext } from 'react-icons'; 
+import './IconPicker.css'; 
 
 const IconPicker = ({
   rowsInOnePage = 4,
   columnsInOnePage = 5,
-  iconHeight = 60, // Increased icon size for larger appearance
+  iconHeight = 60, 
   iconWidth = 60,
-  pickerHeight = 600, // Increased picker size
+  pickerHeight = 600, 
   pickerWidth = 600,
   onSelectIcon,
 }) => {
@@ -30,13 +28,13 @@ const IconPicker = ({
 
   const handleIconClick = (icon) => {
     setSelectedIcon(icon);
-    onSelectIcon(icon); // Notify parent component
-    setIsPickerOpen(false); // Close the picker
+    onSelectIcon(icon); 
+    setIsPickerOpen(false); 
   };
 
   return (
     <div className="relative flex justify-center items-center h-screen bg-gray-900">
-      {/* Triggering div */}
+      {}
       <div
         className="icon-trigger w-32 h-32 border-4 border-gray-600 flex justify-center items-center cursor-pointer rounded-lg hover:border-blue-400"
         onClick={() => setIsPickerOpen(!isPickerOpen)}
@@ -44,7 +42,7 @@ const IconPicker = ({
         {selectedIcon ? React.createElement(FiIcons[selectedIcon], { size: 60, color: 'white' }) : <span className="text-white">Select Icon</span>}
       </div>
 
-      {/* Icon picker */}
+      {}
       {isPickerOpen && (
         <div
           className="icon-picker fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gray-800 border-2 border-gray-700 shadow-lg rounded-lg z-50"

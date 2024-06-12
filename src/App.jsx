@@ -1,8 +1,6 @@
-// src/App.jsx
-
 import React, { useState } from 'react';
 import IconPicker from './IconPicker';
-import * as FiIcons from 'react-icons/fi'; // Import all Feather icons
+import * as FiIcons from 'react-icons/fi'; 
 
 const App = () => {
   const [selectedIcon, setSelectedIcon] = useState(null);
